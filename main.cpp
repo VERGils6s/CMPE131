@@ -24,10 +24,10 @@ ICSystem* InputNew()
  pNewNode->next=NULL; 
  
 
- printf("please enter income information[name,job,balance]:\n");
+ printf("please enter item to Wishlist information[name,type,balance]:\n");
  printf("=========================================");
  printf("\n name:");   scanf("%s",&pNewNode->name);          fflush(stdin);
- printf("job:");     scanf("%s",&pNewNode->InComeWay);  fflush(stdin);
+ printf("type:");     scanf("%s",&pNewNode->InComeWay);  fflush(stdin);
  printf("balance :");     scanf("%d",&pNewNode->HowMuch);     fflush(stdin);
  printf("======================================\n"); 
  return pNewNode;
@@ -77,7 +77,7 @@ void OutputList(ICSystem *head)
  }
  
     
-    printf("         income information              \n");
+    printf("         Wishlist             \n");
     printf("======================================\n");
     printf("name \t\t job\t\t balance \t\t\n");
     ICSystem *pCur=head;
@@ -266,10 +266,10 @@ void menu(void)
  printf("\n\t\t\t                   Dollar Dream \n");
  printf("\t\t\t|-----------------------------------------------|\n");
  printf("\t\t\t|\t                 \t                |\n");
- printf("\t\t\t|\t [1] Build income list \t                |\n");
- printf("\t\t\t|\t [3] Add income information\t        |\n");
- printf("\t\t\t|\t [5] Delate income information\t        |\n");
- printf("\t\t\t|\t [7] Display income information \t|\n");
+ printf("\t\t\t|\t [1] Build Wishlist \t                |\n");
+ printf("\t\t\t|\t [3] Add item to Wishlist information\t|\n");
+ printf("\t\t\t|\t [5] Delete item in Wishlist information|\n");
+ printf("\t\t\t|\t [7] Display Wishlist \t                |\n");
  printf("\t\t\t|\t [0] Exit \t\t                |\n");
  printf("\t\t\t|\t                 \t                |\n");
  printf("\t\t\t|-----------------------------------------------|\n");
@@ -277,7 +277,7 @@ void menu(void)
  printf("\t\t\t|\t                 \t                |\n");
  printf("\t\t\t|\t [2] Build cost list \t                |\n");
  printf("\t\t\t|\t [4] Add cost information \t        |\n");
- printf("\t\t\t|\t [6] Delate cost information \t  \      |\n");
+ printf("\t\t\t|\t [6] Delete cost information \t  \      |\n");
  printf("\t\t\t|\t [8] Display cost information \t        |\n");
  printf("\t\t\t|\t [0] Exit \t\t                |\n");
  printf("\t\t\t|\t                 \t                |\n");
@@ -333,20 +333,20 @@ void main()
    break;
   case 5:
    printf("please enter name:");scanf("%s",name);
-   printf("please enter way:");scanf("%s",icway);
+   printf("please enter type:");scanf("%s",icway);
    printf("please enter balance:");scanf("%d",&money);
    phead=DeleteNode(phead,name,icway,money);
    if(i==1)
    {
-    printf("delate success\n");
+    printf("delete success\n");
     OutputList(phead);
    }
    else 
    {
     system("cls");
-    printf("No node find\n");
+    printf(" no node find\n");
    }
-   printf("\n Press enter to continue");
+   printf("\n press enter to continue");
    fflush(stdin);
    getch();
    break;
@@ -357,7 +357,7 @@ void main()
    phead_=DeleteNode_(phead_,name_,icway_,money_);
    if(i==1)
    {
-    printf("delate success\n");
+    printf("delete success\n");
     OutputList_(phead_);
    }
    else 
@@ -388,11 +388,12 @@ void main()
    exit(1);
    break;
   default:
-   printf("you enter wrong char, enter to continue。");
+   printf("you enter wrong char, enter to continue¡£");
    getch(); 
    menu();
    fflush(stdin);
   }
  }
 }
+
 
