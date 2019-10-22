@@ -344,9 +344,9 @@ void main()
    else 
    {
     system("cls");
-    printf("²»´æÔÚ¸Ã½ÚµãÐÅÏ¢\n");
+    printf("No node find\n");
    }
-   printf("\n°´»Ø³µ¼ü»Øµ½Ö÷²Ëµ¥¡£");
+   printf("\n Press enter to continue");
    fflush(stdin);
    getch();
    break;
@@ -388,7 +388,7 @@ void main()
    exit(1);
    break;
   default:
-   printf("you enter wrong char, enter to continue¡£");
+   printf("you enter wrong char, enter to continueã€‚");
    getch(); 
    menu();
    fflush(stdin);
